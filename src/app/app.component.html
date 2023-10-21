@@ -1,0 +1,18 @@
+<div class="finder">
+  <h1>Find GitHub User</h1>
+  <div class="search-container pseudo-search">
+  <input [(ngModel)]="searchInput" placeholder="Enter GitHub username">
+  <button (click)="searchUser()" class="mat-icon-button ">
+    <span class="button-icon">🔍</span>
+  </button>
+  
+</div>
+<app-user-card *ngIf="userData" [user]="userData"></app-user-card>
+<div *ngIf="noResults;">
+  <div class="card additional" >
+  <h2>No hay usuarios que cumplan con el criterio de búsqueda</h2>
+</div>
+</div>
+</div>
+
+
